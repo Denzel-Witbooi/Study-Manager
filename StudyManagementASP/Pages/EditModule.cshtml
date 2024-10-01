@@ -1,0 +1,73 @@
+﻿@page "{id:int}"
+@model StudyManagementASP.Pages.EditModuleModel
+
+
+<form method="post">
+    <input asp-for="Module.Id" type="hidden" />
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-info pl-3"> Edit Module</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                @*Module Code*@
+                <div class="form-group row p-3">
+                    <div class="col-4">
+                        <label asp-for="Module.ModuleCode"></label>
+                    </div>
+                    <div class="col-8">
+
+                        <input asp-for="Module.ModuleCode" class="form-control" />
+                        <span asp-validation-for="Module.ModuleCode" class="text-danger"></span>
+                    </div>
+                </div>
+                @*end*@
+                @*Module Name*@
+                <div class="form-group row p-3">
+                    <div class="col-4">
+                        <label asp-for="Module.ModuleName"></label>
+                    </div>
+                    <div class="col-8">
+                        @*TEXTBOX HERE*@
+                        <input asp-for="Module.ModuleName" class="form-control" />
+                        <span asp-validation-for="Module.ModuleName" class="text-danger"></span>
+                    </div>
+
+                </div>
+                @*end*@
+
+
+
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row p-4">
+
+                        <div class="col">
+                            @*CREATE BUTTON*@
+                            <input type="submit" class="btn btn-info w-100" value="Update" />
+                        </div>
+                        <div class="col">
+                            @*BACK LINK*@
+                            <a class="btn btn-success w-100" href="/allmodule">
+                                <i class="fas fa-sign-out-alt"></i> &nbsp; BACK
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                @* Keep this empty *@
+            </div>
+        </div>
+
+
+    </div>
+</form>
+
+@*Validation for client side*@
+@section Scripts{
+
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

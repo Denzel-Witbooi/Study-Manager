@@ -1,0 +1,40 @@
+﻿@page
+@model StudyManagementASP.Pages.LoginModel
+
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3"> Login </h1>
+
+            @*Form*@
+            <form method="post">
+                @*UserName*@
+                <div class="mb-3">
+                    <label class="form-label" asp-for="login.UserName">User Name</label>
+                    <input type="text" asp-for="login.UserName" class="form-control" />
+                    <span asp-validation-for="login.UserName" class="text-danger"></span>
+                </div>
+
+                @*Password*@
+                <div class="mb-3">
+                    <label class="form-label" asp-for="login.Password">Password</label>
+                    <input type="password" asp-for="login.Password" class="form-control" />
+                    <span asp-validation-for="login.Password" class="text-danger"></span>
+                </div>
+
+                @*RememberMe*@
+                <div class="mb-3 form-check">
+                    <input type="checkbox" asp-for="login.RememberMe" class="form-check-input" />
+                    <label class="form-check-label" asp-for="login.RememberMe"> Remember Me</label>
+                </div>
+
+                @*Button Submit*@
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+﻿@page
+@using StudyManagementLibrary.Model
+@model StudyManagementASP.Pages.ModuleModel
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3"> Module Information </h1>
+
+            <form method="post">
+                @*authentication div*@
+                <div asp-validation-summary="All" class="text-danger">
+                </div>
+                @*Module Code*@
+                <div class="mb-4">
+                    <label class="form-label" asp-for="Module.ModuleCode"> </label>
+                    <input asp-for="Module.ModuleCode" class="form-control" />
+                    <span asp-validation-for="Module.ModuleCode" class="text-danger"></span>
+                </div>
+
+                @*Module Name*@
+                <div class="mb-4">
+                    <label class="form-label" asp-for="Module.ModuleName"></label>
+                    <input asp-for="Module.ModuleName" class="form-control" />
+                    <span asp-validation-for="Module.ModuleName" class="text-danger"></span>
+                </div>
+
+                @*Credits*@
+                <div class="mb-4">
+                    <label class="form-label" asp-for="Module.Credits"></label>
+                    <input asp-for="Module.Credits" class="form-control" />
+                    <span asp-validation-for="Module.Credits" class="text-danger"></span>
+                </div>
+
+                @*Class Hours Per Week*@
+                <div class="mb-4">
+                    <label class="form-label" asp-for="Module.ClassHrsPW"></label>
+                    <input asp-for="Module.ClassHrsPW" class="form-control" />
+                    <span asp-validation-for="Module.ClassHrsPW" class="text-danger"></span>
+                </div>
+
+                @*Start Date*@
+                <div class="mb-4">
+                    <label class="form-label" asp-for="Module.StartDate"></label>
+                    <input asp-for="Module.StartDate" class="form-control" />
+                    <span asp-validation-for="Module.StartDate" class="text-danger"></span>
+                </div>
+
+                @*Semester Week*@
+                <div class="mb-4">
+                    <label class="form-label" asp-for="Module.SemesterWeek"></label>
+                    <input asp-for="Module.SemesterWeek" class="form-control" />
+                    <span asp-validation-for="Module.SemesterWeek" class="text-danger"></span>
+                </div>
+
+                @* Date Studied*@
+                <div class="mb-4">
+                    <label class="form-label" asp-for="Module.DateStudied"></label>
+                    <input asp-for="Module.DateStudied" class="form-control" />
+                    <span asp-validation-for="Module.DateStudied" class="text-danger"></span>
+                </div>
+
+                @*Hours Worked*@
+                <div class="mb-4">
+                    <label class="form-label" asp-for="Module.HoursWorked"></label>
+                    <input asp-for="Module.HoursWorked" class="form-control" />
+                    <span asp-validation-for="Module.HoursWorked" class="text-danger"></span>
+                </div>
+
+
+                @*Submit Button*@
+                <div class="mb-4">
+                    <input type="submit" class="btn btn-primary" value="Save" />
+                    <a class="btn btn-default" href="/Index">Cancel</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
